@@ -1,0 +1,6 @@
+{
+	"jwtPrivateKey": "degnon_jwtPrivateKey",
+	"db": "degnon_db",
+	"loginApiKey": "neon_loginApiKey",
+	"loginOrgId": "neon_loginOrgId" 
+}
