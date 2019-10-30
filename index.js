@@ -1,5 +1,8 @@
 const bouncy = require('bouncy');
 
+require('./amspdc').fork;
+require('./comsep').fork;
+
 const server = bouncy(function (req, res, bounce) {
     if (req.headers.host === 'localhost.test1') {
         bounce(3001);

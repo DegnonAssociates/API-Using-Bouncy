@@ -10,7 +10,7 @@ const router   = express.Router();
 router.post('/', validate(validateAuth), async (req,res) => {
 	const loginUri = config.get('neonUri') + '/common/login';
 	const loginApiKey = req.body.apiKey;
-	const loginOrgId = req.body.organizationId;
+	const loginOrgId = config.get('amspdcNeonOrganizationId');
 	const getUrl = `${loginUri}?login.apiKey=${loginApiKey}&login.orgid=${loginOrgId}`;
 
 	const request = await fetch(getUrl);
@@ -24,7 +24,6 @@ router.post('/', validate(validateAuth), async (req,res) => {
 
 function validateAuth(req) {
 	const schema = {
-		organizationId: Joi.string().min(3).max(255).required(),
 		apiKey: Joi.string().min(32).max(32).required()
 	};
 
