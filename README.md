@@ -15,5 +15,4 @@ Attempted solution for using a singular IISnode instance
 127.0.0.1 localhost.test2
 ```
 
-- Run index.js in the main root folder.
-- Run a separate process on index.js for the ./amspdc and ./comsep root folders
+- Run index.js in the main root folder. This will also start forked child processes for the two separate API applications located in ./amspdc and ./comsep
