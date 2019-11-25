@@ -8,6 +8,7 @@ const neonLogout   = require('../routes/neon/logout');
 const neonAuth     = require('../routes/neon/auth');
 const neonIndividualAccounts = require('../routes/neon/accounts/individual');
 const neonPasswordReset      = require('../routes/neon/accounts/reset');
+const degnonJournalClub      = require('../routes/degnon/journalClub');
 
 
 module.exports = function(app) {
@@ -23,6 +24,8 @@ module.exports = function(app) {
 	app.use('/api/v2/neon/auth', neonAuth);
 	app.use('/api/v2/neon/accounts/individual', neonIndividualAccounts);
 	app.use('/api/v2/neon/accounts/reset', neonPasswordReset);
+	
+	app.use('/api/v2/degnon/journalclub', degnonJournalClub);
 	app.use(errorHandler);
 }
 

@@ -4,5 +4,13 @@
 	"db":"mongodb://localhost/neon",
 	"neonUri":"https://api.neoncrm.com/neonws/services/api",
 	"amspdcNeonOrganizationId":"amspdc",
-	"comsepNeonOrganizationId":"comsep"
+	"comsepNeonOrganizationId":"comsep",
+	"dbConfig":{
+		"user":"comsepadmin",
+		"password":"comsepadminpwd",
+		"server":"degnonsql2",
+		"database":"COMSEP",
+		"port":1433
+	},
+	"defaultSearchLimit":20
 }
