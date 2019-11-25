@@ -5,13 +5,13 @@ const express   = require('express');
 const router    = express.Router();
 
 
-router.get('/', async (req,res) => {
+router.get('/:page?/:perPage?', async (req,res) => {
     try {
         const numRows = await dbHelper.getCount("journal_club");
         // page number passed in URL query string
-        const page = parseInt(req.query.page, 10) || 1;  
+        const page = parseInt(req.params.page, 10) || 1;  
         // items per page
-        const numPerPage  = parseInt(config.defaultSearchLimit); 
+        const numPerPage  = parseInt(req.params.perPage, 10) || parseInt(config.defaultSearchLimit); 
         // start row
         const offset = (page - 1) * numPerPage;          
         // max pages available     	    
