@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bouncy": "^3.2.2",
-    "mssql": "^6.0.1"
+    "mssql": "^6.0.1",
+    "npm": "^6.13.1"
   }
 }
