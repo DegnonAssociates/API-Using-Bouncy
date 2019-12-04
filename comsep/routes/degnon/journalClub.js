@@ -55,7 +55,7 @@ router.get('/:page?/:perPage?', async (req,res) => {
 			if (err){
 				return res.status(500).send("An error has occurred: " + err);
 			} else {
-				res.send(data.recordsets[0][0]);
+				res.send(data.recordsets[0]);
 			}
 			
 		});

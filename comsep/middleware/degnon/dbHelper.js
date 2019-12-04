@@ -8,7 +8,6 @@ exports.getCount = function (table) {
 			if (err){
 				reject(err);
 			} else {
-                console.log(results);
 				resolve(results.recordset[0].numRows);
 			}
 			
